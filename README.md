@@ -16,3 +16,4 @@
    
 [![DevOps](https://github.com/karimbasly/devop_project/actions/workflows/test.yml/badge.svg)](https://github.com/karimbasly/devop_project/actions/workflows/test.yml)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=karimbasly_devop_project&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=karimbasly_devop_project)
+[![BCH compliance](https://bettercodehub.com/edge/badge/karimbasly/devop_project?branch=develop)](https://bettercodehub.com/)

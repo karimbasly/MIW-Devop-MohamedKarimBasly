@@ -1,0 +1,15 @@
+name: CD - Heroku
+on:
+  push:
+    branches: [ master ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with: { fetch-depth: 0 }
+      - uses: akhileshns/heroku-deploy@v3.6.8 # This is the action
+        with:
+          heroku_email: "karimbasli@live.fr"
+          heroku_api_key: ${{secrets.HEKOU_API_KEY}}
+          heroku_app_name: "devop-project" #Must be unique in Heroku

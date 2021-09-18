@@ -11,7 +11,7 @@
         <version>2.3.3.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <artifactId>devopp_project </artifactId>
+    <artifactId>devopp_project</artifactId>
     <groupId>es.upm.miw</groupId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
