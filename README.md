@@ -12,3 +12,6 @@
    1. **Import Project**, y seleccionar la carpeta del proyecto.
    1. Marcar **Create Project from external model**, elegir **Maven**.
    1. **Next** … **Finish**.
+### Estado del código
+   
+[![DevOps](https://github.com/karimbasly/devop_project/actions/workflows/test.yml/badge.svg)](https://github.com/karimbasly/devop_project/actions/workflows/test.yml)
