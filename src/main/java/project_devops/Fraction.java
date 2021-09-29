@@ -67,4 +67,27 @@ public class Fraction {
                 ", denominator=" + denominator +
                 '}';
     }
+
+    public boolean isProper() {
+        return this.numerator < this.denominator;
+    }
+
+    public boolean isImproper() {
+        return this.numerator > this.denominator;
+    }
+
+    public boolean isEquivalent(Fraction fraction) {
+        return this.numerator * fraction.getDenominator() == this.denominator * fraction.getNumerator();
+    }
+
+    public Fraction multiply(Fraction fraction) {
+        return new Fraction(this.numerator * fraction.getNumerator(),
+                this.denominator * fraction.getDenominator());
+    }
+
+    public Fraction divide(Fraction fraction) {
+        return new Fraction(this.numerator * fraction.getDenominator(),
+                this.denominator * fraction.getNumerator());
+
+    }
 }
