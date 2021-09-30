@@ -49,8 +49,8 @@ public class UserTest {
 
     @Test
     void testSetFamilyName() {
-        user.setFamilyName("Basly");
-        assertEquals("basly", user.getFamilyName());
+        user.setFamilyName("alex");
+        assertEquals("alex", user.getFamilyName());
     }
 
     @Test
