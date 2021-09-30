@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -50,7 +50,7 @@ public class UserTest {
 
     @Test
     void testSetFamilyName() {
-        user.setFamilyName("basly");
+        user.setFamilyName("Basly");
         assertEquals("basly", user.getFamilyName());
     }
 

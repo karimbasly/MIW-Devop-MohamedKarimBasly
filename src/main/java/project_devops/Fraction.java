@@ -1,6 +1,8 @@
 package project_devops;
 
 
+import java.util.Objects;
+
 /**
  * Conceptos: Las fracciones propias son aquellas cuyo numerador es menor que el denominador
  * <p>
@@ -59,7 +61,6 @@ public class Fraction {
     public double decimal() {
         return (double) numerator / denominator;
     }
-
     @Override
     public String toString() {
         return "Fraction{" +
@@ -67,4 +68,48 @@ public class Fraction {
                 ", denominator=" + denominator +
                 '}';
     }
+
+    public boolean isProper() {
+        return this.numerator < this.denominator;
+    }
+
+    public boolean isImproper() {
+        return this.numerator > this.denominator;
+    }
+
+    public boolean isEquivalent(Fraction fraction) {
+        return this.numerator * fraction.getDenominator() == this.denominator * fraction.getNumerator();
+    }
+
+    public Fraction multiply(Fraction fraction) {
+        return new Fraction(this.numerator * fraction.getNumerator(),
+                this.denominator * fraction.getDenominator());
+    }
+
+    public Fraction divide(Fraction fraction) {
+        return new Fraction(this.numerator * fraction.getDenominator(),
+                this.denominator * fraction.getNumerator());
+
+    }
+
+    public Fraction add(Fraction fr) {
+        int numerator = (this.numerator * fr.getDenominator()) +
+                (this.denominator * fr.getNumerator());
+        int denominator = this.denominator * fr.getDenominator();
+        return new Fraction(numerator, denominator);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Fraction fraction = (Fraction) o;
+        return numerator == fraction.numerator && denominator == fraction.denominator;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numerator, denominator);
+    }
+
 }
