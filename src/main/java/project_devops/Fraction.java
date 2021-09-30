@@ -61,6 +61,7 @@ public class Fraction {
     public double decimal() {
         return (double) numerator / denominator;
     }
+
     @Override
     public String toString() {
         return "Fraction{" +

@@ -1,19 +1,16 @@
 package project_devops;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Assertions;
 
 import java.util.ArrayList;
-
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UserTest {
-    private User user ;
     ArrayList<Fraction> fractions;
-
-
+    private User user;
 
     @BeforeEach
     void before() {
@@ -22,11 +19,13 @@ public class UserTest {
         fractions.add(new Fraction(3, 7));
         user = new User("1", "pablo", "escobar", fractions);
     }
+
     @Test
     void testUserWithoutParameters() {
         user = new User();
         assertEquals(new ArrayList<>(), user.getFractions());
     }
+
     @Test
     void testGetId() {
         assertEquals("1", user.getId());
@@ -55,7 +54,7 @@ public class UserTest {
     }
 
     @Test
-    void testGetFractions(){
+    void testGetFractions() {
         Assertions.assertEquals(fractions, user.getFractions());
     }
 
@@ -69,19 +68,19 @@ public class UserTest {
     }
 
     @Test
-    void testAddFraction(){
+    void testAddFraction() {
         Fraction fraction = new Fraction(1, 3);
         user.addFraction(fraction);
         Assertions.assertEquals(fraction, user.getFractions().get(user.getFractions().size() - 1));
     }
 
     @Test
-    void testFullName(){
+    void testFullName() {
         assertEquals("pablo escobar", user.fullName());
     }
 
     @Test
-    void testInitials(){
+    void testInitials() {
         assertEquals("p.", user.initials());
     }
 

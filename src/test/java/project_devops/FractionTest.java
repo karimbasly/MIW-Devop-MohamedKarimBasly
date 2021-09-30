@@ -1,15 +1,14 @@
 package project_devops;
 
 
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
-
 public class FractionTest {
-   private Fraction fraction;
+    private Fraction fraction;
 
     @BeforeEach
     void initializeTestData() {
@@ -29,7 +28,7 @@ public class FractionTest {
     @Test
     void testSetNumerator() {
         fraction.setNumerator(2);
-       assertEquals(2, fraction.getNumerator());
+        assertEquals(2, fraction.getNumerator());
     }
 
     @Test
@@ -54,8 +53,9 @@ public class FractionTest {
         fraction.setDenominator(5);
         assertTrue(fraction.isProper());
     }
+
     @Test
-    void testisImproper(){
+    void testisImproper() {
         assertTrue(fraction.isImproper());
         fraction.setDenominator(5);
         assertFalse(fraction.isImproper());
@@ -69,18 +69,18 @@ public class FractionTest {
     }
 
 
-
     @Test
-    void testMultiply(){
+    void testMultiply() {
         Fraction fr = new Fraction(2, 2);
-        assertEquals(new Fraction(8,4), fraction.multiply(fr));
+        assertEquals(new Fraction(8, 4), fraction.multiply(fr));
     }
 
     @Test
-    void testDivide(){
-        Fraction fr = new Fraction(3,1);
-        assertEquals(new Fraction(4,6),fraction.divide(fr));
+    void testDivide() {
+        Fraction fr = new Fraction(3, 1);
+        assertEquals(new Fraction(4, 6), fraction.divide(fr));
     }
+
     @Test
     void testAdd() {
         assertEquals(new Fraction(16, 4), fraction.add(fraction));
