@@ -53,4 +53,15 @@ public class SearchesTest {
         assertEquals(user, Searches.findUserIdBySomeProperFraction().collect(Collectors.toList()));
     }
 
+    @Test
+    void testFindUserFamilyNameInitialBySomeProperFraction() {
+        ArrayList<String> user = new ArrayList<>();
+        user.add("Oscar");
+        user.add("Ana");
+        user.add("Oscar");
+        user.add("Antonio");
+        user.add("Paula");
+        assertEquals(user, new Searches().findUserNameByAnyImproperFraction().collect(Collectors.toList()));
+    }
+
 }

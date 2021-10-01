@@ -55,5 +55,12 @@ public class Searches {
                 .map(User::getId);
     }
 
+    public Stream<String> findUserNameByAnyImproperFraction() {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getFractions().stream()
+                        .anyMatch(Fraction::isImproper))
+                .map(User::Name);
+    }
+
 }
 
