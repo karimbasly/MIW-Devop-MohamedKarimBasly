@@ -2,8 +2,10 @@ package project_devops;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -40,4 +42,15 @@ public class SearchesTest {
     void testFindFirstDecimalFractionByUserName() {
         assertEquals(0.0, Searches.findFirstDecimalFractionByUserName("Oscar"), 10e-5);
     }
+
+    @Test
+    void testFindUserIdBySomeProperFraction() {
+        ArrayList<String> user = new ArrayList<>();
+        user.add("1");
+        user.add("2");
+        user.add("3");
+        user.add("5");
+        assertEquals(user, Searches.findUserIdBySomeProperFraction().collect(Collectors.toList()));
+    }
+
 }
