@@ -100,6 +100,10 @@ public class Fraction {
         return new Fraction(numerator, denominator);
     }
 
+    public static int compare(Fraction fraction1, Fraction fraction2) {
+        return Double.compare(fraction1.decimal(), fraction2.decimal());
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
