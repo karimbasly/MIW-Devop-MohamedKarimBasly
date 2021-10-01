@@ -35,4 +35,9 @@ public class SearchesTest {
                 new Searches().findHighestFraction()
         );
     }
+
+    @Test
+    void testFindFirstDecimalFractionByUserName() {
+        assertEquals(0.0, Searches.findFirstDecimalFractionByUserName("Oscar"), 10e-5);
+    }
 }

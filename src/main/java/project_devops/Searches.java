@@ -3,6 +3,7 @@ package project_devops;
 import org.apache.logging.log4j.LogManager;
 
 import java.util.Objects;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 
@@ -38,6 +39,14 @@ public class Searches {
                 .flatMap(user -> user.getFractions().stream())
                 .max(Fraction::compare)
                 .orElse(new Fraction());
+    }
+
+    public static Double findFirstDecimalFractionByUserName(String name) {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getName().equals(name))
+                .flatMap(user -> user.getFractions().stream())
+                .collect(Collectors.toList())
+                .get(0).decimal();
     }
 
 
