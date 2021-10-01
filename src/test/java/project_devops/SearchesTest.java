@@ -2,10 +2,10 @@ package project_devops;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
+
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -45,23 +45,12 @@ public class SearchesTest {
 
     @Test
     void testFindUserIdBySomeProperFraction() {
-        ArrayList<String> user = new ArrayList<>();
-        user.add("1");
-        user.add("2");
-        user.add("3");
-        user.add("5");
-        assertEquals(user, Searches.findUserIdBySomeProperFraction().collect(Collectors.toList()));
+        assertEquals(List.of("1", "2", "3", "5"), Searches.findUserIdBySomeProperFraction().collect(Collectors.toList()));
     }
 
     @Test
     void testFindUserFamilyNameInitialBySomeProperFraction() {
-        ArrayList<String> user = new ArrayList<>();
-        user.add("Oscar");
-        user.add("Ana");
-        user.add("Oscar");
-        user.add("Antonio");
-        user.add("Paula");
-        assertEquals(user, new Searches().findUserNameByAnyImproperFraction().collect(Collectors.toList()));
+        assertEquals(List.of("Oscar", "Ana", "Oscar", "Antonio", "Paula"), new Searches().findUserNameByAnyImproperFraction().collect(Collectors.toList()));
     }
 
 }
