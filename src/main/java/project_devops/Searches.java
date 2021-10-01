@@ -49,6 +49,11 @@ public class Searches {
                 .get(0).decimal();
     }
 
+    public static Stream<String> findUserIdBySomeProperFraction() {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getFractions().stream().anyMatch(Fraction::isProper))
+                .map(User::getId);
+    }
 
 }
 
